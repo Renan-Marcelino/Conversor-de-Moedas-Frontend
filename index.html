@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+
+<div>
+    <button onclick="alterarOpcao(1)">DOLAR</button>
+    <button onclick="alterarOpcao(2)">LIBRA</button>
+    <button onclick="alterarOpcao(3)">EURO</button>
+    <button onclick="alterarOpcao(4)">BRL</button>
+    <button onclick="alterarOpcao(5)">TODOS</button>
+</div>
+
+<div>
+    <button onclick="converterMoedas()">Converter</button>
+</div>
+
+<ul id="valoresConvertidos"></ul>
+<form onsubmit="converterMoedas(); return false;">
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero" name="numero" onkeydown="handleKeyPress(event)" />
+</form>
+
+<div>
+    <button onclick="alterarMoedaLocal('USD')">DOLAR</button>
+    <button onclick="alterarMoedaLocal('GBP')">LIBRA</button>
+    <button onclick="alterarMoedaLocal('EUR')">EURO</button>
+    <button onclick="alterarMoedaLocal('BRL')">BRL</button>
+</div>
+
+
+    <script src="Scrypt.js"></script>
+  </body>
+</html>
+<!-- const apiKey = "bf85cd4cc4157b1b81332b1b";
+-->

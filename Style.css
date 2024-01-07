@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#labelConversorDeMoedas {
+    position: relative;
+    font-weight: bold;
+    font-size: 32px;
+    margin-left: 13%;
+    top: 2rem;
+}
+
+#LabelMoedaParaConverter {
+    font-family: "Roboto";
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    top: 5.5rem;
+    margin-left: 2.5%;
+}
+
+#opcaoDeMoeda {
+    position: relative;
+    top: 7.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0.18rem;
+    height: 5.5rem;
+}
+
+#valorParaConverter {
+    position: relative;
+    top: 7.3rem;
+    font-size: 28px;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+#opcaoDeMoeda button {
+    margin: 0.16rem;
+    margin-bottom: 0.3rem;
+    font-size: 21px;
+    font-weight: bold;
+    color: rgb(64, 60, 60);
+}
+
+#BTN-ConverterMoeda {
+    position: relative;
+    width: 23rem;
+    height: 2.2rem;
+    margin-left: 6%;
+    top: 29.5rem;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#MoedaEscolhida {
+    position: relative;
+    top: 12rem;
+    font-weight: bold;
+    font-size: 32px;
+    margin-left: 11%;
+
+}
+
+#numero {
+    position: relative;
+    top: 9.2rem;
+    border: solid 1px black;
+    width: 20.5rem;
+    height: 1.9rem;
+    font-size: 28px;
+    margin-left: 10%;
+}
+
+#moedaLocal {
+    position: relative;
+    top: 13rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0.18rem;
+    height: 5.5rem;
+}
+
+#moedaLocal button {
+    margin: 0.16rem;
+    margin-bottom: 0.3rem;
+    font-size: 21px;
+    font-weight: bold;
+    color: rgb(64, 60, 60);
+}
+
+#valoresConvertidos {
+    list-style-type: none; 
+    padding: 0; 
+    position: absolute;
+    top: 43rem;
+    margin-left: 3%;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#valoresConvertidos li {
+    margin-bottom: 10px;
+}

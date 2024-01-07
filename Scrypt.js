@@ -17,20 +17,20 @@ let opcao = 1;
     }
 
     async function converterMoedas() {
-        const moedas = ["USD", "GBP", "BRL", "EUR"];
+        const moedas = ["USD", "GBP", "BRL", "EUR", "JPY"];
         const valorDaConversao = parseFloat(document.getElementById("numero").value);
         const valoresConvertidos = [];
 
         for (const moeda of moedas) {
-            if (opcao == 5 || (opcao == 1 && moeda === "USD") || (opcao == 2 && moeda === "GBP") || (opcao == 3 && moeda === "EUR") || (opcao == 4 && moeda === "BRL")) {
+            if (opcao == 6 || (opcao == 1 && moeda === "USD") || (opcao == 2 && moeda === "GBP") || (opcao == 3 && moeda === "EUR") || (opcao == 4 && moeda === "BRL") || (opcao == 5 && moeda === "JPY")) {
                 const valorConvertido = await obterValorMoeda(valorDaConversao, moeda, moedaLocal);
                 valoresConvertidos.push(
-                    `De ${moeda} para ${moedaLocal}: ${valorConvertido}`
+                    `${valorDaConversao} ${moeda} equivale a: ${valorConvertido.toFixed(2)} ${moedaLocal}`
                 );
-            } else if (opcao > 5) {
+            } else if (opcao > 6) {
                 const valorConvertido = await obterValorMoeda(valorDaConversao, moeda, moedaLocal);
                 valoresConvertidos.push(
-                    `De ${moeda} para ${moedaLocal}: ${valorConvertido}`
+                    `${valorDaConversao} em ${moeda} equivale a: ${valorConvertido}${moedaLocal}`
                 );
             }
         }
@@ -51,7 +51,7 @@ let opcao = 1;
                 const taxaCambio = data.rates[moedaLocal] || 1;
                 const valorConvertido = valorParaConverter * taxaCambio;
                 console.log(
-                    `Valor convertido de ${codigoMoeda} para ${moedaLocal}: ${valorConvertido}`
+                    `Valor convertido de ${codigoMoeda} para ${moedaLocal}: ${valorConvertido.toFixed(2)}`
                 );
                 return valorConvertido;
             })
